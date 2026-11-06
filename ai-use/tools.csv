@@ -1,0 +1,2 @@
+tool_id,product,provider,model,access_mode,account_type,trains_on_inputs,first_used,last_used,notes
+claude-web-opus-5.5,Claude,Anthropic,Opus 5.5,web,,unknown,2026-11-06,2026-11-06,

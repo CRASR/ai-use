@@ -1,0 +1,3 @@
+date,tool,stage,task,output_type,tier,disposition,human_contribution,verification,shared_material,link,recorded
+2026-11-06,claude-web-opus-5.5,information_collection,"Locate AI-use disclosure frameworks, publisher policies, and energy and water studies",references,2,pending,Set the scope: a protocol for writing AI-use statements rather than a perspective paper,Pending: maintainer to check cited sources,none,PROTOCOL.md; STATEMENTS.md; ENVIRONMENT.md,contemporaneous
+2026-11-06,claude-web-opus-5.5,writing_original_draft,"Draft protocol, statement guide, environment page, and templates",text,2,pending,"Specified the tables, data dictionary, repository contents, and the water and energy page",Pending: maintainer review of all text,none,initial commit,contemporaneous
