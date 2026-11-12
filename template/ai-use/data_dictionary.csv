@@ -4,12 +4,12 @@ ai_log,tool,string,yes,tool_id from tools.csv; separate several with ;,AI tool o
 ai_log,stage,categorical,yes,conceptualization|methodology|information_collection|data_collection_method|execution|data_curation|data_analysis|software|privacy_security|interpretation|visualization|writing_original_draft|writing_review_editing|writing_translation|project_administration,Research stage (AID Framework headings; software and writing_original_draft from CRediT)
 ai_log,task,string,yes,,What AI was used for in a few words
 ai_log,output_type,categorical,yes,code|text|references|data|figure|advice,What the AI produced
-ai_log,tier,integer,yes,1|2|3,Risk tier: 1 errors visible on reading; 2 errors caught by ordinary checks; 3 errors that could pass silently into results. Tier 0 uses (spell-check and search engines) are not logged
+ai_log,tier,integer,yes,1|2|3,Risk tier: 1 errors visible on reading; 2 errors caught by ordinary checks; 3 errors that could pass silently into results. Tier 1 logging is optional; tier 0 (spell-check and search engines) is not logged
 ai_log,disposition,categorical,yes,accepted|modified|rejected|pending,What happened to the AI output
 ai_log,human_contribution,string,yes,,What a person decided or created in one line
 ai_log,verification,string,tier 2-3,,The check and its evidence (test or comparison or source read)
 ai_log,shared_material,string,yes,none|public|restricted: <material from materials.csv>,Material given to the AI tool
-ai_log,link,string,tier 2-3,,Commit hash or file path or exported session in sessions/
+ai_log,link,string,tier 2-3,,"Commit hash, file path, test, or decision record"
 ai_log,recorded,categorical,yes,contemporaneous|reconstructed,Whether the row was written at the time or reconstructed later
 tools,tool_id,string,yes,unique,Short key used in ai_log.tool; make a new id when the model version changes
 tools,product,string,yes,,Product name

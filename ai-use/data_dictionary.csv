@@ -1,0 +1,29 @@
+table,field,type,required,allowed_values,description
+ai_log,date,date,yes,YYYY-MM-DD,Date of the work session
+ai_log,tool,string,yes,tool_id from tools.csv; separate several with ;,AI tool or tools used
+ai_log,stage,categorical,yes,conceptualization|methodology|information_collection|data_collection_method|execution|data_curation|data_analysis|software|privacy_security|interpretation|visualization|writing_original_draft|writing_review_editing|writing_translation|project_administration,Research stage (AID Framework headings; software and writing_original_draft from CRediT)
+ai_log,task,string,yes,,What AI was used for in a few words
+ai_log,output_type,categorical,yes,code|text|references|data|figure|advice,What the AI produced
+ai_log,tier,integer,yes,1|2|3,Risk tier: 1 errors visible on reading; 2 errors caught by ordinary checks; 3 errors that could pass silently into results. Tier 1 logging is optional; tier 0 (spell-check and search engines) is not logged
+ai_log,disposition,categorical,yes,accepted|modified|rejected|pending,What happened to the AI output
+ai_log,human_contribution,string,yes,,What a person decided or created in one line
+ai_log,verification,string,tier 2-3,,The check and its evidence (test or comparison or source read)
+ai_log,shared_material,string,yes,none|public|restricted: <material from materials.csv>,Material given to the AI tool
+ai_log,link,string,tier 2-3,,"Commit hash, file path, test, or decision record"
+ai_log,recorded,categorical,yes,contemporaneous|reconstructed,Whether the row was written at the time or reconstructed later
+tools,tool_id,string,yes,unique,Short key used in ai_log.tool; make a new id when the model version changes
+tools,product,string,yes,,Product name
+tools,provider,string,yes,,Company or organization providing the tool
+tools,model,string,yes,,Model name and version as displayed by the tool
+tools,access_mode,categorical,yes,web|api|ide_agent|cli_agent,How the tool was accessed
+tools,account_type,categorical,no,personal|institutional|enterprise,Account the tool was used under
+tools,trains_on_inputs,categorical,yes,yes|no|unknown,Whether the provider may train on inputs under that account's settings
+tools,first_used,date,no,YYYY-MM-DD,First use in this repository
+tools,last_used,date,no,YYYY-MM-DD,Last use in this repository
+tools,notes,string,no,,
+materials,material,string,yes,unique,Name of the material
+materials,source,string,yes,,Who owns or supplied it
+materials,terms,string,yes,,License or terms of use or confidentiality conditions
+materials,share_decision,categorical,yes,share|share_training_off|do_not_share,Whether it may go to an AI tool
+materials,decided_on,date,yes,YYYY-MM-DD,Date the share decision was made
+materials,notes,string,no,,

@@ -1,0 +1,24 @@
+# On a version tag (e.g. v2.0), attach ai-use-template.zip to a GitHub release.
+# Stable link: https://github.com/CRASR/ai-use/releases/latest/download/ai-use-template.zip
+name: release-template
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build zip
+        run: |
+          cp R/ai_use.R template/ai-use/
+          cd template && zip -r ../ai-use-template.zip ai-use
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" ai-use-template.zip --title "$GITHUB_REF_NAME" --notes "AI-use template folder and R helper."

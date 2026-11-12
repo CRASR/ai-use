@@ -43,13 +43,13 @@ Anthropic, the maker of Claude, has not published per-prompt or per-token energy
 
 For a center that studies Texas reservoirs, this system-level growth matters more than any single prompt. Data center demand draws on the same supplies that state water planning allocates.
 
-## What we do
+## What we try to do
 
-1. **Use AI only where it is proportionate.** Don't use it for tasks a script, search, or reference handles as well; see "Before using AI" in [PROTOCOL.md](PROTOCOL.md).
+1. **Use AI where it is proportionate.** Skip it for tasks a script, search, or reference handles as well; see "Before using AI" in [POLICY.md](POLICY.md).
 2. **Choose the smallest adequate model.** Mistral reports that a model ten times larger has roughly ten times the impact for the same number of tokens ([Mistral 2025][mistral]). Reasoning modes and the largest models are for tasks that need them.
 3. **Keep agent sessions lean.** Give clear task definitions, start fresh sessions when the task changes, and stop loops that are not converging.
 4. **Have AI write reusable scripts** for repeated jobs, rather than calling AI again for each repetition.
-5. **Estimate heavy use.** For projects with heavy agentic use, record monthly token totals from the tool's usage report, convert them with a stated per-token factor, and label the result as an estimate.
+5. **Estimate heavy use where practical.** For projects with heavy agentic use, record monthly token totals from the tool's usage report, convert them with a stated per-token factor, and label the result as an estimate.
 6. **Favor transparent providers.** Where options exist, prefer providers that publish per-use energy and water figures, and ask vendors for them.
 
 Cutting individual use is an inefficient climate lever compared with supporting the transition to clean energy ([Couch 2026][couch]). System-level outcomes depend mostly on providers, utilities, and regulators. Our main contributions are proportionate use, transparent reporting, and research on the water supplies at stake.
