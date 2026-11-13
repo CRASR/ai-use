@@ -7,10 +7,12 @@ The policy describes the practice we work toward. It is built on published frame
 ## What we aim for
 
 - **Accountability.** People stay responsible for everything in the work. AI is never an author.
+- **Judgment stays with people.** AI helps build code and tools; it does not replace expertise, statistical thinking, or critical judgment, and it does not analyze our data or produce our results.
+- **People write.** Writing is how we think and learn, so we write our own papers. AI may give feedback or help with translation.
 - **Useful disclosure.** Say what AI did, at which research stage, and how its output was checked.
 - **A light record.** A short log kept with the code, in proportion to the risk of each use. Chat histories are optional.
-- **Care with others' material.** Decide before licensed, unpublished, or client material reaches an AI tool.
-- **Independence.** Code and analyses run and can be reviewed without AI, and colleagues may choose not to use it.
+- **Care with others' material.** Client data, and manuscripts and proposals we review, never go to an AI tool.
+- **Reproducibility.** Code and analyses run and can be reviewed without AI.
 - **Proportion.** Use AI where the benefit justifies its energy and water costs.
 
 ## Contents
@@ -18,7 +20,7 @@ The policy describes the practice we work toward. It is built on published frame
 | Path | What it is |
 |---|---|
 | [POLICY.md](POLICY.md) | The policy: principles, questions to ask first, risk tiers, records, and how to write a statement |
-| [ENVIRONMENT.md](ENVIRONMENT.md) | Energy and water use of AI, including Texas, and what we try to do about it |
+| [ENVIRONMENT.md](ENVIRONMENT.md) | A short summary of research on the energy and water use of AI, including in Texas |
 | [template/ai-use/](template/ai-use) | The folder to copy into a project: log, tool and material tables, data dictionary |
 | [R/ai_use.R](R/ai_use.R) | R helper to download the template, add log rows, validate the tables, and draft a statement |
 | [ai-use/](ai-use) | This repository's own AI-use record |
@@ -43,10 +45,11 @@ ai_use_check()       # flags missing or invalid entries
 ai_use_statement()   # drafts a statement from the log
 ```
 
-To pin a version, pass a tag: `ai_use_init(ref = "v2.0")`.
+To say a project follows the policy, add this line to its README:
 
-**As a zip.** Each tagged release attaches the template folder and the R helper:
-<https://github.com/CRASR/ai-use/releases/latest/download/ai-use-template.zip>
+```markdown
+AI use in this project follows the [CRASR AI-use policy](https://github.com/CRASR/ai-use); the record is in `ai-use/`.
+```
 
 **File by file.** Each template file is at `https://raw.githubusercontent.com/CRASR/ai-use/main/template/ai-use/<file>`, for example [ai_log.csv](https://raw.githubusercontent.com/CRASR/ai-use/main/template/ai-use/ai_log.csv).
 
@@ -61,10 +64,13 @@ Each part of the policy and template traces to published work.
 | `verification` | Name the check, not just "reviewed" | Wahle et al. 2023; Smith et al. 2024; King et al. 2026 |
 | `human_contribution`, `disposition` | Show what people decided and delegated | Suchikova et al. 2025; COPE 2023; ICMJE 2026 |
 | `tools.csv` (model, version, dates) | Model behavior changes between versions, so record versions and dates | Weaver 2024; Knöchel et al. 2025 |
-| `materials.csv`, `shared_material` | Decide on confidential and licensed material before sharing | Knöchel et al. 2025; European Commission 2026 |
+| `materials.csv`, `shared_material` | Keep client data and review material out entirely; check licenses on other material | Knöchel et al. 2025; European Commission 2026 |
 | `ai-use/` folder, `recorded` | Keep documentation alongside disclosure | Cwik 2026; World Bank |
 | "Before using AI" questions | Protect skills, consider others, prefer inspectable routes | Shen & Tamkin 2026; King et al. 2026; Knöchel et al. 2025 |
-| One policy for all venues | Meet the shared core of publisher and funder rules | COPE 2023; ICMJE 2026; STM 2025; European Commission 2026; NIH 2025 |
+| Judgment stays with people; AI builds tools, not results | Keep expertise, interpretation, and analysis with people, and keep work reproducible without AI | COPE 2023; Smith et al. 2024; King et al. 2026; World Bank |
+| Writing | People write; feedback and translation are reasonable uses | Nature Reviews Bioengineering 2025; Kosmyna et al. 2025; Amano et al. 2023; Berdejo-Espinola & Amano 2023 |
+| Peer review | Review material never goes to AI tools | NIH 2023; NSF 2023; Hosseini & Horbach 2023 |
+| One policy for all venues | Meet the shared core of publisher rules | COPE 2023; ICMJE 2026; STM 2025; European Commission 2026 |
 
 ### Disclosure and documentation frameworks
 
@@ -78,15 +84,24 @@ Each part of the policy and template traces to published work.
 - Weaver, K. D. (2024). The Artificial Intelligence Disclosure (AID) Framework: An introduction. *College & Research Libraries News* 85(10): 407–411. https://doi.org/10.5860/crln.85.10.407
 - World Bank. Documenting AI use for reproducible research. https://worldbank.github.io/wb-reproducible-research-repository/guidance/AI_reproducibility_guidelines.html
 
-### Research integrity, publisher, and funder guidance
+### Research integrity, peer review, publisher, and funder guidance
 
 - Castellacci, F., Ciarli, T., Gao, Y., Marino, M., Marzi, G., Riccaboni, M., Savona, M. & Vannuccini, S. (2026). Generative artificial intelligence in scientific research: individual benefits, collective risks, and a framework for responsible research with AI. arXiv:2607.24879. https://doi.org/10.48550/arXiv.2607.24879
 - Committee on Publication Ethics (2023). Authorship and AI tools: COPE position statement. https://publicationethics.org/cope-position-statements/ai-author
 - European Commission, ERA Forum (2026). *Living guidelines on the responsible use of generative AI in research*, third version. https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/updated-era-living-guidelines-responsible-use-generative-ai-research-2026-05-08_en
 - International Committee of Medical Journal Editors (2026). Recommendations, Section V: Use of artificial intelligence in publishing (updated January 2026). https://www.icmje.org/recommendations/browse/artificial-intelligence/
 - Knöchel, T.-D., Schweizer, K. J., Acar, O. A., et al. (2025). Core principles of responsible generative AI usage in research. *AI and Ethics* 5: 6371–6377. https://doi.org/10.1007/s43681-025-00768-8
-- National Institutes of Health (2025). Supporting fairness and originality in NIH research applications. NOT-OD-25-132. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-25-132.html
+- Hosseini, M. & Horbach, S. P. J. M. (2023). Fighting reviewer fatigue or amplifying bias? Considerations and recommendations for use of ChatGPT and other large language models in scholarly peer review. *Research Integrity and Peer Review* 8: 4. https://doi.org/10.1186/s41073-023-00133-5
+- National Institutes of Health (2023). The use of generative artificial intelligence technologies is prohibited for the NIH peer review process. NOT-OD-23-149. https://grants.nih.gov/grants/guide/notice-files/NOT-OD-23-149.html
+- National Science Foundation (2023). Notice to research community: Use of generative artificial intelligence technology in the NSF merit review process. https://www.nsf.gov/news/notice-to-the-research-community-on-ai
 - *The Scholarly Kitchen* (2026). Guest post: Research needs a shared standard for AI disclosure. https://scholarlykitchen.sspnet.org/2026/07/13/guest-post-research-needs-a-shared-standard-for-ai-disclosure/
+
+### Writing and learning
+
+- Amano, T., Ramírez-Castañeda, V., Berdejo-Espinola, V., et al. (2023). The manifold costs of being a non-native English speaker in science. *PLOS Biology* 21(7): e3002184. https://doi.org/10.1371/journal.pbio.3002184
+- Berdejo-Espinola, V. & Amano, T. (2023). AI tools can improve equity in science. *Science* 379: 991. https://doi.org/10.1126/science.adg9714
+- Kosmyna, N., Hauptmann, E., Yuan, Y. T., Situ, J., Liao, X.-H., Beresnitzky, A. V., Braunstein, I. & Maes, P. (2025). Your brain on ChatGPT: Accumulation of cognitive debt when using an AI assistant for essay writing task. arXiv:2506.08872. https://doi.org/10.48550/arXiv.2506.08872
+- *Nature Reviews Bioengineering* (2025). Writing is thinking. *Nature Reviews Bioengineering* 3: 431. https://doi.org/10.1038/s44222-025-00323-4
 
 ### Using AI in scientific computing
 
@@ -109,4 +124,4 @@ Suggestions and corrections are welcome as issues.
 
 Claude (Opus 5.5, Anthropic), accessed through claude.ai in November 2026, located the frameworks, policies, and energy and water studies cited here; drafted the policy, environment page, templates, and the R helper; and checked the citations against their published records. Caleb Robbins set the purpose, scope, and requirements[, reviewed and edited the text, and checked the cited sources]. The R helper was tested on a sample project. No unpublished or restricted material was shared with AI tools. The record is in [ai-use/](ai-use). The maintainer takes full responsibility for the content.
 
-Maintainer: Caleb Robbins, CRASR, Baylor University.
+Maintainer: CRASR, Baylor University.

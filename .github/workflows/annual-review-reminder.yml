@@ -1,0 +1,32 @@
+# Opens a GitHub issue each November reminding the maintainer to review the policy.
+# GitHub emails assignees about new issues (subject to their notification settings).
+# Note: GitHub pauses scheduled workflows in public repos after 60 days with no commits;
+# re-enable it from the Actions tab if that happens, or run it by hand.
+name: annual-review-reminder
+
+on:
+  schedule:
+    - cron: "0 15 13 11 *"   # 13 November, 15:00 UTC (9:00 Central)
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open review issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh issue create \
+            --title "Annual review of the AI-use policy ($(date +%Y))" \
+            --assignee robbinscalebj \
+            --body "Time for the yearly look at POLICY.md, ENVIRONMENT.md, and the README references.
+
+          - [ ] Check COPE, ICMJE, STM, and European Commission guidance for updates
+          - [ ] Check whether the World Conferences on Research Integrity disclosure standard has been published
+          - [ ] Update ENVIRONMENT.md figures if newer estimates exist
+          - [ ] Confirm links in the README still resolve"

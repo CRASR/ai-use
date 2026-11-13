@@ -15,7 +15,7 @@ ai_use_url <- function(file, ref = "main") {
 }
 
 # Copy the template into <path>/ai-use. Existing files are kept unless overwrite = TRUE.
-# ref pins a branch or tag, e.g. ref = "v2.0".
+# ref selects the branch to download from.
 ai_use_init <- function(path = ".", ref = "main", overwrite = FALSE) {
   dir <- file.path(path, "ai-use")
   dir.create(dir, showWarnings = FALSE, recursive = TRUE)
