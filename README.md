@@ -13,13 +13,15 @@ The policy describes the practice we work toward. It is built on published frame
 - **A light record.** A short log kept with the code, in proportion to the risk of each use. Chat histories are optional.
 - **Care with others' material.** Client data, and manuscripts and proposals we review, never go to an AI tool.
 - **Reproducibility.** Code and analyses run and can be reviewed without AI.
+- **Code we understand.** AI-generated code tends to be bloated and brittle, so we read, simplify, and test it before it is merged. No vibe coding.
 - **Proportion.** Use AI where the benefit justifies its energy and water costs.
 
 ## Contents
 
 | Path | What it is |
 |---|---|
-| [POLICY.md](POLICY.md) | The policy: principles, questions to ask first, risk tiers, records, and how to write a statement |
+| [POLICY.md](POLICY.md) | The policy: principles, questions to ask first, risk tiers, pitfalls of AI-assisted coding, records, and how to write a statement |
+| [CODING-WITH-AI.md](CODING-WITH-AI.md) | Instructions and skills for AI coding assistants to avoid the pitfalls, including a learning mode and a starting `AGENTS.md` |
 | [ENVIRONMENT.md](ENVIRONMENT.md) | A short summary of research on the energy and water use of AI, including in Texas |
 | [template/ai-use/](template/ai-use) | The folder to copy into a project: log, tool and material tables, data dictionary |
 | [R/ai_use.R](R/ai_use.R) | R helper to download the template, add log rows, validate the tables, and draft a statement |
@@ -69,6 +71,8 @@ Each part of the policy and template traces to published work.
 | "Before using AI" questions | Protect skills, consider others, prefer inspectable routes | Shen & Tamkin 2026; King et al. 2026; Knöchel et al. 2025 |
 | Judgment stays with people; AI builds tools, not results | Keep expertise, interpretation, and analysis with people, and keep work reproducible without AI | COPE 2023; Smith et al. 2024; King et al. 2026; World Bank |
 | Writing | People write; feedback and translation are reasonable uses | Nature Reviews Bioengineering 2025; Kosmyna et al. 2025; Amano et al. 2023; Berdejo-Espinola & Amano 2023 |
+| Pitfalls of AI-assisted coding | Watch for technical debt, comprehension debt, and misjudged speed; review AI code for simplicity | He et al. 2026; Liu et al. 2026; Ahmad 2026; Becker et al. 2025; Fawzy et al. 2025; Merz 2026 |
+| Assistant setup ([CODING-WITH-AI.md](CODING-WITH-AI.md)) | Standing instructions, learning mode, and skills that counter the pitfalls | Anthropic (Claude Code docs); Çetinkaya-Rundel 2026; Kazemitabaar et al. 2024; Shen & Tamkin 2026 |
 | Peer review | Review material never goes to AI tools | NIH 2023; NSF 2023; Hosseini & Horbach 2023 |
 | One policy for all venues | Meet the shared core of publisher rules | COPE 2023; ICMJE 2026; STM 2025; European Commission 2026 |
 
@@ -108,7 +112,19 @@ Each part of the policy and template traces to published work.
 - King, R. A., Abowd, L., Broderick, C. W., et al. (2026). Ten simple rules for effective use of generative AI for code development in environmental science. *PLOS Computational Biology* 22(8): e1014627. https://doi.org/10.1371/journal.pcbi.1014627
 - Shen, J. H. & Tamkin, A. (2026). How AI impacts skill formation. arXiv:2601.20245. https://doi.org/10.48550/arXiv.2601.20245
 - Smith, G. R., Bello, C., Bialic-Murphy, L., et al. (2024). Ten simple rules for using large language models in science, version 1.0. *PLOS Computational Biology* 20(1): e1011767. https://doi.org/10.1371/journal.pcbi.1011767
-- Arel-Bundock, V. DADR: Data Analysis Decision Records. https://vincentarelbundock.github.io/dadr
+
+### Pitfalls of AI-generated code, and setting up assistants to avoid them
+
+- Ahmad, M. O. (2026). Comprehension debt in GenAI-assisted software engineering projects. *30th International Conference on Evaluation and Assessment in Software Engineering (EASE 2026)*. arXiv:2604.13277. https://doi.org/10.48550/arXiv.2604.13277
+- Anthropic. Best practices for Claude Code. https://code.claude.com/docs/en/best-practices
+- Anthropic. Output styles. https://code.claude.com/docs/en/output-styles
+- Becker, J., Rush, N., Barnes, E. & Rein, D. (2025). Measuring the impact of early-2025 AI on experienced open-source developer productivity. arXiv:2507.09089. https://doi.org/10.48550/arXiv.2507.09089
+- Çetinkaya-Rundel, M. (2026). Beyond the prompt: Programming as a pathway to statistical thinking. Talk, R+AI Conference. Slides: https://speakerdeck.com/minecr/beyond-the-prompt-rai; course `AGENTS.md`: https://github.com/mine-cetinkaya-rundel/beyond-the-prompt-rai-2026/blob/main/examples/hw/AGENTS.md
+- Fawzy, A., Tahir, A. & Blincoe, K. (2025). Vibe coding in practice: Motivations, challenges, and a future outlook – a grey literature review. arXiv:2510.00328. https://doi.org/10.48550/arXiv.2510.00328
+- He, H., Miller, C., Agarwal, S., Kästner, C. & Vasilescu, B. (2026). Speed at the cost of quality: How Cursor AI increases short-term velocity and long-term complexity in open-source projects. *23rd International Conference on Mining Software Repositories (MSR 2026)*. arXiv:2511.04427. https://doi.org/10.48550/arXiv.2511.04427
+- Kazemitabaar, M., Ye, R., Wang, X., Henley, A. Z., Denny, P., Craig, M. & Grossman, T. (2024). CodeAid: Evaluating a classroom deployment of an LLM-based programming assistant that balances student and educator needs. *CHI 2024*. https://doi.org/10.1145/3613904.3642773
+- Liu, Y., Widyasari, R., Zhao, Y., Irsan, I. C. & Lo, D. (2026). Debt behind the AI boom: A large-scale empirical study of AI-generated code in the wild. arXiv:2603.28592. https://doi.org/10.48550/arXiv.2603.28592
+- Merz, E. X. (2026). AI usage generates a fragile codebase. Blog post, 7 November 2026. https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/
 
 Sources for the energy and water figures are listed in [ENVIRONMENT.md](ENVIRONMENT.md#sources).
 

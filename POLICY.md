@@ -63,6 +63,16 @@ We never put manuscripts, proposals, or our own review reports into AI tools. Re
 
 Coding agents work on development copies of code and data, never on live systems or with credentials to them.
 
+## Pitfalls of AI-assisted coding
+
+AI-generated code tends to be longer, more duplicated, and more complex than the task needs, and those costs build up over time, so review it for simplicity as well as correctness and trim it before merging ([Merz 2026](https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/); He et al. 2026; Liu et al. 2026). The research names three costs worth watching for:
+
+- **Technical debt.** Code that works today but is harder to change tomorrow. When open-source projects adopted an AI coding agent, development sped up briefly while static-analysis warnings and code complexity rose and stayed high, and that added complexity later slowed the projects down (He et al. 2026). Across about 300,000 AI-written commits on GitHub, most of the issues introduced were code smells, and more than a fifth were still present in the latest version of the code (Liu et al. 2026).
+- **Comprehension debt.** The gap between the code a team has and the code it understands (Ahmad 2026). It is the coding counterpart of the cognitive debt seen when people write with AI (Kosmyna et al. 2025), and it grows when code is accepted without being read. Developers who delegated a new task to AI learned it less well than those who used AI to ask questions (Shen & Tamkin 2026).
+- **Misjudged speed.** In a randomized trial, experienced developers expected AI to make them faster and afterwards believed it had, but they actually took 19% longer (Becker et al. 2025).
+
+"Vibe coding," building software by prompting with little review of the code, makes all three worse (Fawzy et al. 2025). We don't work that way. Whoever merges AI-written code should be able to explain every line of it, keep changes small enough to review, and write tests that check real behavior rather than restating the code. [CODING-WITH-AI.md](CODING-WITH-AI.md) gives instructions and skills for AI assistants that help with all of this.
+
 ## AI as a method
 
 This is the exception to AI not producing results: a study that deliberately uses AI as a measurement tool, for example to extract values from published papers. Report it as a method rather than as assistance, and validate it like any other instrument. Keep the model, settings, prompts, raw outputs, and a comparison against a human-checked sample (World Bank; Resnik & Hosseini 2025).
