@@ -10,24 +10,15 @@ A short summary of current research, compiled November 2026.
 
 ## Sources
 
-- Couch, S. P. (2026). Electricity use of AI coding agents. https://simonpcouch.com/blog/2026-01-20-cc-impact/
-- Elsworth, C. et al. (2025). Measuring the environmental impact of delivering AI at Google scale. arXiv:2508.15734. https://arxiv.org/abs/2508.15734
-- Hausfather, Z. (2026). The real energy use of agentic AI. *The Climate Brink*, reposted at https://skepticalscience.com/print.php?n=6600
-- Houston Advanced Research Center (2026). Thirsty Data and the Lone Star State: The Impact of Data Center Growth on Texas' Water Supply. https://harcresearch.org/news/texas-data-center-boom-could-consume-up-to-161-billion-gallons-of-water-annually-by-2030/
-- International Energy Agency (2025). Energy and AI. Summary: https://www.nsenergybusiness.com/analysis/energy-and-ai-key-findings-from-the-iea/
-- Jegham, N., Abdelatti, M., Elmoubarki, L. & Hendawi, A. (2025). How Hungry is AI? Benchmarking Energy, Water, and Carbon Footprint of LLM Inference. arXiv:2505.09598. https://arxiv.org/abs/2505.09598
-- Li, P., Yang, J., Islam, M. A. & Ren, S. (2025). Making AI Less "Thirsty": Uncovering and Addressing the Secret Water Footprint of AI Models. *Communications of the ACM*. arXiv:2304.03271. https://arxiv.org/abs/2304.03271
-- Mistral AI (2025). Lifecycle analysis of Mistral Large 2, reported in [The Decoder](https://the-decoder.com/mistral-ai-publishes-the-first-comprehensive-life-cycle-assessment-of-a-large-language-model/).
-- Shehabi, A. et al. (2024). 2024 United States Data Center Energy Usage Report. LBNL-2001637. https://doi.org/10.71468/P1WC7Q
-- You, J. (2025). How much energy does ChatGPT use? Epoch AI. https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use
+Full references, each with a one-line note, are in the [reading list](references/reading-list.md), also published at [crasr.github.io](https://crasr.github.io/projects/ai-reading-list.html). Download them as [BibTeX](references/ai-science-reading-list.bib) or [RIS](references/ai-science-reading-list.ris).
 
-[google]: https://arxiv.org/abs/2508.15734
+[google]: https://doi.org/10.48550/arXiv.2508.15734
 [epoch]: https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use
-[jegham]: https://arxiv.org/abs/2505.09598
-[mistral]: https://the-decoder.com/mistral-ai-publishes-the-first-comprehensive-life-cycle-assessment-of-a-large-language-model/
+[jegham]: https://doi.org/10.48550/arXiv.2505.09598
+[mistral]: https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai
 [couch]: https://simonpcouch.com/blog/2026-01-20-cc-impact/
-[hausfather]: https://skepticalscience.com/print.php?n=6600
-[li]: https://arxiv.org/abs/2304.03271
-[iea]: https://www.nsenergybusiness.com/analysis/energy-and-ai-key-findings-from-the-iea/
+[hausfather]: https://www.theclimatebrink.com/p/the-real-energy-use-of-agentic-ai
+[li]: https://doi.org/10.1145/3724499
+[iea]: https://www.iea.org/reports/energy-and-ai
 [lbnl]: https://doi.org/10.71468/P1WC7Q
 [harc]: https://harcresearch.org/news/texas-data-center-boom-could-consume-up-to-161-billion-gallons-of-water-annually-by-2030/

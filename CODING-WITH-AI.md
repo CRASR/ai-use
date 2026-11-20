@@ -34,8 +34,8 @@ One file can serve several tools: write `AGENTS.md`, then put a single line `@AG
 | Comprehension debt | "After each change, explain in two or three sentences what changed and why." | Code accepted without being understood is how comprehension debt builds (Ahmad 2026) |
 | Comprehension debt | "Keep each change small enough to review in one sitting." | Large, fast diffs get skimmed (Merz 2026) |
 | Misjudged speed | "Run the tests or checks and show the output. Don't report success without evidence." | People overestimate how much AI helped (Becker et al. 2025); evidence is quicker to review than claims (Anthropic, *Best practices*) |
-| Quiet statistical errors | "After joins and filters, report row counts before and after." | AI code can run cleanly while silently dropping rows (Çetinkaya-Rundel 2026) |
-| Quiet statistical errors | "Don't choose models, priors, or tests for me. List the options and their assumptions, and flag ones the data may violate." | Keeps judgment with people (policy principle 2); AI may ignore problems such as overdispersion (Çetinkaya-Rundel 2026) |
+| Quiet statistical errors | "After joins and filters, report row counts before and after." | AI code can run cleanly while silently dropping rows ([Çetinkaya-Rundel 2026](https://speakerdeck.com/minecr/beyond-the-prompt-rai)) |
+| Quiet statistical errors | "Don't choose models, priors, or tests for me. List the options and their assumptions, and flag ones the data may violate." | Keeps judgment with people (policy principle 2); AI may ignore problems such as overdispersion ([Çetinkaya-Rundel 2026](https://speakerdeck.com/minecr/beyond-the-prompt-rai)) |
 | AI builds tools, not results | "Write code for me to run. Don't run analyses on project data or interpret results." | Keeps results reproducible and produced by people (policy principle 8) |
 | Writing | "Don't draft text for papers. Comment on my drafts only when I ask." | People write our papers (policy, Writing) |
 
@@ -61,7 +61,7 @@ Instructions alone are not enough here, because they are advisory.
 
 When the goal is to learn, whether you are a student or learning a new method, the assistant should act as a tutor rather than a solution generator. Developers who asked AI conceptual questions learned a new library better than those who delegated the code (Shen & Tamkin 2026), and an assistant built to explain rather than hand over code has been used through a semester by a 700-student programming course (Kazemitabaar et al. 2024).
 
-Çetinkaya-Rundel (2026) gives students in her introductory data science course an [`AGENTS.md`](https://github.com/mine-cetinkaya-rundel/beyond-the-prompt-rai-2026/blob/main/examples/hw/AGENTS.md) that does this. Adapted for our use, a learning-mode file asks the assistant to:
+In her talk [*Beyond the prompt*](https://speakerdeck.com/minecr/beyond-the-prompt-rai), [Mine Çetinkaya-Rundel](https://mine-cr.com) (2026) describes giving students in her introductory data science course an [`AGENTS.md`](https://github.com/mine-cetinkaya-rundel/beyond-the-prompt-rai-2026/blob/main/examples/hw/AGENTS.md) that does this. Adapted for our use, a learning-mode file asks the assistant to:
 
 - act as a teaching assistant, not a solution generator, and not edit the learner's files or run their code;
 - ask what the learner tried, expected, and saw before helping;
@@ -113,13 +113,4 @@ AI use here follows the CRASR AI-use policy: https://github.com/CRASR/ai-use
 
 ## References
 
-- Ahmad, M. O. (2026). Comprehension debt in GenAI-assisted software engineering projects. *EASE 2026*. arXiv:2604.13277. https://doi.org/10.48550/arXiv.2604.13277
-- Anthropic. Best practices for Claude Code. https://code.claude.com/docs/en/best-practices
-- Anthropic. Output styles. https://code.claude.com/docs/en/output-styles
-- Becker, J., Rush, N., Barnes, E. & Rein, D. (2025). Measuring the impact of early-2025 AI on experienced open-source developer productivity. arXiv:2507.09089. https://doi.org/10.48550/arXiv.2507.09089
-- Çetinkaya-Rundel, M. (2026). Beyond the prompt: Programming as a pathway to statistical thinking. Talk, R+AI Conference. Slides: https://speakerdeck.com/minecr/beyond-the-prompt-rai; course `AGENTS.md`: https://github.com/mine-cetinkaya-rundel/beyond-the-prompt-rai-2026/blob/main/examples/hw/AGENTS.md
-- He, H., Miller, C., Agarwal, S., Kästner, C. & Vasilescu, B. (2026). Speed at the cost of quality: How Cursor AI increases short-term velocity and long-term complexity in open-source projects. *MSR 2026*. arXiv:2511.04427. https://doi.org/10.48550/arXiv.2511.04427
-- Kazemitabaar, M., Ye, R., Wang, X., Henley, A. Z., Denny, P., Craig, M. & Grossman, T. (2024). CodeAid: Evaluating a classroom deployment of an LLM-based programming assistant that balances student and educator needs. *CHI 2024*. https://doi.org/10.1145/3613904.3642773
-- Liu, Y., Widyasari, R., Zhao, Y., Irsan, I. C. & Lo, D. (2026). Debt behind the AI boom: A large-scale empirical study of AI-generated code in the wild. arXiv:2603.28592. https://doi.org/10.48550/arXiv.2603.28592
-- Merz, E. X. (2026). AI usage generates a fragile codebase. https://evanxmerz.com/post/ai-usage-generates-a-fragile-codebase/
-- Shen, J. H. & Tamkin, A. (2026). How AI impacts skill formation. arXiv:2601.20245. https://doi.org/10.48550/arXiv.2601.20245
+Full references, each with a one-line note, are in the [reading list](references/reading-list.md), also published at [crasr.github.io](https://crasr.github.io/projects/ai-reading-list.html). Download them as [BibTeX](references/ai-science-reading-list.bib) or [RIS](references/ai-science-reading-list.ris).

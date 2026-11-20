@@ -10,7 +10,7 @@ AI does not replace domain expertise, statistical thinking, or critical judgment
 
 One policy covers papers and software. It is written to satisfy the requirements that publisher policies share (see [Why one policy](#why-one-policy)). Where a journal asks for more, its rules apply.
 
-Full references are in the [README](README.md#literature-basis).
+Full references are in the [reading list](references/reading-list.md).
 
 ## Principles
 
@@ -71,7 +71,7 @@ AI-generated code tends to be longer, more duplicated, and more complex than the
 - **Comprehension debt.** The gap between the code a team has and the code it understands (Ahmad 2026). It is the coding counterpart of the cognitive debt seen when people write with AI (Kosmyna et al. 2025), and it grows when code is accepted without being read. Developers who delegated a new task to AI learned it less well than those who used AI to ask questions (Shen & Tamkin 2026).
 - **Misjudged speed.** In a randomized trial, experienced developers expected AI to make them faster and afterwards believed it had, but they actually took 19% longer (Becker et al. 2025).
 
-"Vibe coding," building software by prompting with little review of the code, makes all three worse (Fawzy et al. 2025). We don't work that way. Whoever merges AI-written code should be able to explain every line of it, keep changes small enough to review, and write tests that check real behavior rather than restating the code. [CODING-WITH-AI.md](CODING-WITH-AI.md) gives instructions and skills for AI assistants that help with all of this.
+"Vibe coding," building software by prompting with little review of the code, makes all three worse (Fawzy et al. 2026). We don't work that way. Whoever merges AI-written code should be able to explain every line of it, keep changes small enough to review, and write tests that check real behavior rather than restating the code. [CODING-WITH-AI.md](CODING-WITH-AI.md) gives instructions and skills for AI assistants that help with all of this.
 
 ## AI as a method
 
